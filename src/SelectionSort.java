@@ -1,10 +1,11 @@
+// Imports
 import java.util.ArrayList;
 import java.util.Comparator;
 
 // A class to use for selection sorting
 public class SelectionSort {
 	
-	// A method that sorts the array list of students based on the comparator passed in
+	// A method that sorts the array list of students using selection sort based on the comparator passed in
 	public static void selectionSort(ArrayList<Student> studentList, Comparator<Student> comparator) {
 		// Loop through the entire array
 		for (int outerIndex = 0; outerIndex < studentList.size() - 1; outerIndex++) {
@@ -14,7 +15,7 @@ public class SelectionSort {
 			try {
 				// Find the next lowest item if possible and set the new lowest index
 				for (int innerIndex = outerIndex + 1; innerIndex < studentList.size(); innerIndex++) {
-					if (comparator.compare(studentList.get(50), studentList.get(minIndex)) < 0) {
+					if (comparator.compare(studentList.get(innerIndex), studentList.get(minIndex)) < 0) {
 						minIndex = innerIndex;
 					}
 				}
