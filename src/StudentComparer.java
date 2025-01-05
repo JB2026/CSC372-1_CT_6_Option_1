@@ -21,13 +21,13 @@ public class StudentComparer {
 		studentList.add(new Student(3, "Josh Miller", "864 Farm Rd"));
 		
 		// Sort the students by roll number
-		SelectionSort.selectionSort(studentList, new RollNumberComparator());
+		SelectionSort.<Student>selectionSort(studentList, new RollNumberComparator());
 		
 		// Output the students sorted by roll number
 		outputArrayList(studentList, "Students Sorted By Roll Number:");
 		
 		// Sort the students by name
-		SelectionSort.selectionSort(studentList, new NameComparator());
+		SelectionSort.<Student>selectionSort(studentList, new NameComparator());
 		
 		// Output the students sorted by name
 		outputArrayList(studentList, "Students Sorted By Name:");
@@ -37,8 +37,8 @@ public class StudentComparer {
 	public static void outputArrayList(ArrayList<Student> arrayList, String outputTitle) {
 		System.out.println(outputTitle);
 		
-		for (int i = 0; i < arrayList.size(); i++) {
-			System.out.println(arrayList.get(i).getOutput());
+		for (Student student: arrayList) {
+			System.out.println(student.getOutput());
 		}
 		
 		System.out.println();
